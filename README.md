@@ -14,10 +14,10 @@ Global installation is recommended for Digital Scientists developers. To install
 npm install -g \
   eslint \
   prettier \
-  eslint-plugin-prettier
+  eslint-plugin-prettier \
   eslint-config-prettier \
   eslint-plugin-react \
-  eslint-plugin-react-native \
+  eslint-plugin-react-native
 ```
 
 In your global `~/.eslintrc.json` file:

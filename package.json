@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-digital-scientists",
+  "name": "@digital-scientists/eslint-config",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",

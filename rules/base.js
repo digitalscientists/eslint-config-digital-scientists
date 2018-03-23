@@ -3,7 +3,7 @@
 module.exports = {
   extends: [
     "eslint:recommended",
-    "prettier"
+    "plugin:prettier/recommended"
   ], // overridden below unless new recommended rules are added before this doc is updated
 
   plugins: [
@@ -11,7 +11,11 @@ module.exports = {
   ],
 
   rules: {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", {
+      "bracketSpacing": false,
+      "printWidth": 90,
+      "trailingComma": "all",
+    }],
 
     // http://eslint.org/docs/rules/
 
@@ -59,7 +63,7 @@ module.exports = {
     "array-callback-return": 0, // enforce `return` statements in callbacks of array methods
     "block-scoped-var": 0, // enforce the use of variables within the scope they are defined
     "class-methods-use-this": 1, // enforce that class methods utilize `this`
-    complexity: [1, { max: 8 }], // enforce a maximum cyclomatic complexity allowed in a program
+    complexity: [1, { max: 15 }], // enforce a maximum cyclomatic complexity allowed in a program
     "consistent-return": 0, // require return statements to either always or never specify values
     curly: [1, "multi-line", "consistent"], // enforce consistent brace style for all control statements
     "default-case": 1, // require `default` cases in switch statements

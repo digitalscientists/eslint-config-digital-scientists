@@ -14,6 +14,7 @@ Global installation is recommended for Digital Scientists developers. To install
 npm install -g \
   eslint \
   prettier \
+  eslint-config-digital-scientists \
   eslint-plugin-prettier \
   eslint-config-prettier \
   eslint-plugin-react \

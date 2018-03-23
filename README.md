@@ -11,7 +11,13 @@
 Global installation is recommended for Digital Scientists developers. To install or upgrade the config along with its peer dependencies:
 
 ```sh
-npm install -g eslint eslint-config-digital-scientists eslint-plugin-react
+npm install -g \
+  eslint \
+  prettier \
+  eslint-plugin-prettier
+  eslint-config-prettier \
+  eslint-plugin-react \
+  eslint-plugin-react-native \
 ```
 
 In your global `~/.eslintrc.json` file:

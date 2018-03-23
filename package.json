@@ -1,0 +1,38 @@
+{
+  "name": "eslint-config-digital-scientists",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslintrc",
+    "linter",
+    "lint",
+    "digital scientists"
+  ],
+  "author": "Derric Beining <derrick.beining@gmail.com> (https://github.com/derrickbeining)",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "~3.19.0",
+    "mocha": "^3.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=3.19.0",
+    "eslint-plugin-react": ">=7.0.1",
+    "eslint-plugin-react-native": ">= 3.2.1",
+    "eslint-config-prettier": ">=2.0.0"
+  }
+}

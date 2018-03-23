@@ -14,7 +14,6 @@ module.exports = {
     node: true,
     mocha: true,
     jasmine: true,
-    jquery: true,
     jest: true
   },
 

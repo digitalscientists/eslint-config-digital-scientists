@@ -3,7 +3,7 @@ var path = require('path');
 var expect = require('chai').expect;
 var CLIEngine = require('eslint').CLIEngine;
 
-describe('eslint-config-fullstack', function () {
+describe('eslint-config-digital-scientists', function () {
 
 	var eConfigFs, cli;
 	before('load the module', function () {
@@ -34,7 +34,7 @@ describe('eslint-config-fullstack', function () {
 
 });
 
-describe('eslint-config-fullstack/react', function () {
+describe('eslint-config-digital-scientists/react', function () {
 
 	var cli;
 	before('load the module', function () {

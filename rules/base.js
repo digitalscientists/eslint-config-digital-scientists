@@ -3,6 +3,7 @@
 module.exports = {
   extends: [
     "eslint:recommended",
+    // this extends eslint-config-prettier so we don't need too:
     "plugin:prettier/recommended"
   ], // overridden below unless new recommended rules are added before this doc is updated
 
@@ -19,7 +20,7 @@ module.exports = {
 
     // http://eslint.org/docs/rules/
 
-    // Possible Errors
+    // --------------------- POSSIBLE ERRORS ----------------------
     "no-await-in-loop": 0, // disallow `await` inside of loops
     "no-compare-neg-zero": 1, // disallow comparing against -0
     "no-cond-assign": 2, // disallow assignment operators in conditional expressions
@@ -58,7 +59,7 @@ module.exports = {
     "valid-jsdoc": 0, // enforce valid JSDoc comments
     "valid-typeof": 2, // enforce comparing `typeof` expressions against valid strings
 
-    // Best Practices
+    // --------------------- BEST PRACTICES ----------------------
     "accessor-pairs": 2, // enforce getter and setter pairs in objects
     "array-callback-return": 0, // enforce `return` statements in callbacks of array methods
     "block-scoped-var": 0, // enforce the use of variables within the scope they are defined
@@ -158,7 +159,7 @@ module.exports = {
     "no-unused-vars": [1, { argsIgnorePattern: "^(next|_)$" }], // disallow unused variables
     "no-use-before-define": [1, "nofunc"], // disallow the use of variables before they are defined
 
-    // Node.js and CommonJS
+    // --------------------- NODE.JS AND COMMONJS ----------------------
     "callback-return": 0, // require `return` statements after callbacks
     "global-require": 0, // require `require()` calls to be placed at top-level module scope
     "handle-callback-err": [2, "^(err|error|.+Error$)"], // require error handling in max-nested-callbacks
@@ -170,7 +171,7 @@ module.exports = {
     "no-restricted-modules": 0, // disallow specified modules when loaded by `require`
     "no-sync": 0, // disallow synchronous methods
 
-    // Stylistic Issues
+    // --------------------- STYLISTIC ISSUES ----------------------
     "array-bracket-spacing": 0, // enforce consistent spacing inside array brackets
     "block-spacing": 0, // enforce consistent spacing inside single-line blocks
     "brace-style": 0, // enforce consistent brace style for blocks
@@ -271,7 +272,7 @@ module.exports = {
     "unicode-bom": 0, // require or disallow the Unicode BOM
     "wrap-regex": 0, // require parenthesis around regex literals
 
-    // ECMAScript 6
+    // --------------------- ECMASCRIPT 6 ----------------------
     "arrow-body-style": 0, // require braces around arrow function bodies
     "arrow-parens": 0, // require parentheses around arrow function arguments
     "arrow-spacing": 1, // enforce consistent spacing before and after the arrow in arrow functions

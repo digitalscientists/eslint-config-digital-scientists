@@ -1,22 +1,19 @@
-'use strict';
-
+var resolve = require('path').resolve
 // Specifies additional options to use in React / React-JSX projects.
 // Note that you need to manually install `eslint-plugin-react` as a peer
 // dependency (see https://goo.gl/I4AYlb for more details).
-
 module.exports = {
 
   extends: [
-    'plugin:flowtype/recommended',
     'plugin:react/recommended', // overridden below, unless this package falls behind plugin
-    'prettier/flowtype',
-    'prettier/react',
+    require('eslint-plugin-flowtype') && 'plugin:flowtype/recommended',
+    require('eslint-config-prettier') && 'prettier/react',
+    require('eslint-config-prettier') && 'prettier/flowtype',
   ],
 
   plugins: [
-    'flowtype',
+    require('eslint-plugin-flowtype') && 'flowtype',
     'react',
-    'prettier'
   ],
 
   parserOptions: {
@@ -27,8 +24,6 @@ module.exports = {
   },
 
   rules: {
-    "prettier/prettier": "error",
-
     // https://github.com/yannickcr/eslint-plugin-react
 
     // general React rules

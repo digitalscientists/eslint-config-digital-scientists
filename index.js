@@ -4,8 +4,8 @@ module.exports = {
 
   extends: [
     './rules/base',
-    './rules/react',
-    './rules/react-native',
+    require('eslint-plugin-react') && './rules/react',
+    require('eslint-plugin-react-native') && './rules/react-native',
   ].map(require.resolve),
 
   env: {

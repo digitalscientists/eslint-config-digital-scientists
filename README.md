@@ -1,8 +1,8 @@
-
-
 # eslint-config-digital-scientists
 
-### An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs) for [Digital Scientists](http://www.digital-scientists.com/) developers
+An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs) for [Digital Scientists](http://www.digital-scientists.com/) developers
+
+## This is a WIP and not ready for use
 
 ## Installation
 
@@ -14,9 +14,11 @@ Global installation is recommended for Digital Scientists developers. To install
 npm install -g \
   eslint \
   prettier \
+  babel-eslint \
   eslint-config-digital-scientists \
   eslint-plugin-prettier \
   eslint-config-prettier \
+  eslint-plugin-flow \
   eslint-plugin-react \
   eslint-plugin-react-native
 ```

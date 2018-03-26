@@ -6,46 +6,28 @@ An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-co
 
 ## Installation
 
-### Global
+### Local
 
-Global installation is recommended for Digital Scientists developers. To install or upgrade the config along with its peer dependencies:
+It's recommended to always install linting engines and configs locally, since supported rules and config specifics can change over time and may cause inconsistencies if installed globally and updated over time.
 
 ```sh
-npm install -g \
-  eslint \
-  prettier \
-  babel-eslint \
-  eslint-config-digital-scientists \
-  eslint-plugin-prettier \
-  eslint-config-prettier \
-  eslint-plugin-react \
-  eslint-plugin-react-native
+npm install --save-dev eslint eslint-config-digital-scientists
 ```
 
-In your global `~/.eslintrc.json` file:
+In your local `.eslintrc.{js,json}` file:
 
 ```json
 {
-  "extends": "digital-scientists"
+  "extends": "digital-scientists",
+  "root": true
 }
 ```
 
 Note that the `eslint-config-` portion of the module name is assumed by ESLint.
 
-### Local
-
-A specific project can extend this definition by including `eslint eslint-config-digital-scientists eslint-plugin-react` as saved dev-dependencies, and defining a local `.eslintrc.json`. Project-level eslintrc files are recommended to be set as `root`, which prevents users' global configs from producing inconsistent results:
-
-```json
-{
-	"extends": "digital-scientists",
-	"root": true
-}
-```
-
 ### Integrating With `prettier`
 
-In order to user `prettier`, you will need to do the following:
+In order to user `prettier` with `ESLint` and `eslint-config-digital-scientists`, you will need to do the following:
 
 #### Install dependencies
 ```

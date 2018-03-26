@@ -170,7 +170,7 @@ babel-code-frame@^6.22.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
-babel-eslint@~8.2.2:
+babel-eslint@^8.2.2:
   version "8.2.2"
   resolved "http://registry.npmjs.org/babel-eslint/-/babel-eslint-8.2.2.tgz#1102273354c6f0b29b4ea28a65f97d122296b68b"
   dependencies:
@@ -378,17 +378,33 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
+eslint-config-digital-scientists-base@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-base/-/eslint-config-digital-scientists-base-0.1.0.tgz#38d7dc0b7e818c6b033221db8fed64f75c0abad3"
+
+eslint-config-digital-scientists-react-native@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-react-native/-/eslint-config-digital-scientists-react-native-0.1.2.tgz#ec01a2b7152217c86d4fe8de13a5a50b353fe48a"
+  dependencies:
+    eslint-plugin-react-native "^3.2.1"
+
+eslint-config-digital-scientists-react@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-react/-/eslint-config-digital-scientists-react-0.1.1.tgz#0df26d063bc9837e87a85236728fdfee6c4cb2b3"
+  dependencies:
+    eslint-plugin-react "^7.0.1"
+
 eslint-plugin-react-native-globals@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-native-globals/-/eslint-plugin-react-native-globals-0.1.2.tgz#ee1348bc2ceb912303ce6bdbd22e2f045ea86ea2"
 
-"eslint-plugin-react-native@>= 3.2.1":
+eslint-plugin-react-native@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-native/-/eslint-plugin-react-native-3.2.1.tgz#04fcadd3285b7cd2f27146e640c941b00acc4e7e"
   dependencies:
     eslint-plugin-react-native-globals "^0.1.1"
 
-eslint-plugin-react@>=7.0.1:
+eslint-plugin-react@^7.0.1:
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.7.0.tgz#f606c719dbd8a1a2b3d25c16299813878cca0160"
   dependencies:

@@ -4,7 +4,9 @@ An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-co
 
 ## Installation
 
-It's recommended to always install linting/formatting engines and configs **locally**, since supported rules and config specifics can change over time and may cause inconsistencies across projects if installed globally and updated over time.
+It's recommended to always install linting/formatting engines, configs, and their peer dependencies **locally**, since supported rules and config specifics can change over time and may cause inconsistencies across projects if installed globally and updated over time.
+
+Install config and peer dependencies:
 
 ```sh
 npm install --save-dev --save-exact eslint eslint-config-digital-scientists
@@ -26,14 +28,18 @@ _Note:_
 * the `eslint-config-` portion of the module name is assumed by ESLint.
 * the `root` attribute prevents ESLint from merging local rules with any global configs you may have installed.
 
-### Optional React Native rules
+## For Babel-Transpiled Projects
 
-To add a few `react-native`-specific rules, just add this additional extension to your `.eslintrc` `extends` property list:
+This config's peer dependencies enable linting relatively modern files including JSX components. If you find that the linter fails to understand some early-stage ES features, you can enable parsing using Babel instead of ESLint's default parser. Install `babel-eslint` and set the `parser` option of your config:
+
+```sh
+npm install babel-eslint --save-dev
+```
 
 ```json
 {
-  "extends": ["digital-scientists", "digital-scientists/react-native"],
-
+  "parser": "babel-eslint",
+  "extends": "digital-scientists",
   "root": true
 }
 ```
@@ -90,25 +96,11 @@ Install a Prettier formatting plugin for your editor and set to format on save`
 * For Atom: [prettier-atom](https://github.com/prettier/prettier-atom)
 * For Sublime: [JsPrettier](https://github.com/jonlabelle/SublimeJsPrettier)
 
-## For Babel-Transpiled Projects
-
-This config's peer dependencies enable linting relatively modern files including JSX components. If you find that the linter fails to understand some early-stage ES features, you can enable parsing using Babel instead of ESLint's default parser. Install `babel-eslint` and set the `parser` option of your config:
-
-```sh
-npm install babel-eslint --save-dev
-```
-
-```json
-{
-  "parser": "babel-eslint",
-  "extends": "digital-scientists",
-  "root": true
-}
-```
-
 ## Extending
 
-Any [rules](http://eslint.org/docs/rules/) added to your global or local `.eslintrc.json` files will override the rules defined by this package. For example:
+This package supports rules from [ESLint](http://eslint.org/docs/rules/), [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react), and [eslint-plugin-react-native](https://www.npmjs.com/package/eslint-plugin-react-native).
+
+Any rules added to your global or local `.eslintrc.json` files will override the rules defined by this package. For example:
 
 ```json
 {

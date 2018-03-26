@@ -33,8 +33,8 @@
     "eslint": "^4.6.0"
   },
   "dependencies": {
-    "babel-eslint": "^8.2.2",
-    "eslint-plugin-react": "^7.0.1",
-    "eslint-plugin-react-native": "^3.2.1"
+    "eslint-config-digital-scientists-base": "^0.2.1",
+    "eslint-config-digital-scientists-react": "^0.1.1",
+    "eslint-config-digital-scientists-react-native": "^0.1.2"
   }
 }

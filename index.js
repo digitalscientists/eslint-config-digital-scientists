@@ -1,12 +1,29 @@
 'use strict';
+var chalk = require('chalk')
+
+var configs = [require.resolve('./rules/base')];
+var reactPluginPath;
+var reactNativePluginPath;
+
+try {
+  reactPluginPath = require.resolve('eslint-plugin-react');
+  configs.push(require.resolve('./rules/react'));
+}
+catch (err) {
+  console.warn(chalk.yellow('eslint-plugin-react not found; skipping React rules'))
+}
+
+try {
+  reactNativePluginPath = require.resolve('eslint-plugin-react-native');
+  configs.push(require.resolve('./rules/react-native'));
+}
+catch (err) {
+  console.warn(chalk.yellow('eslint-plugin-react-native not found; skipping React Native rules'))
+}
 
 module.exports = {
 
-  extends: [
-    './rules/base',
-    require('eslint-plugin-react') && './rules/react',
-    require('eslint-plugin-react-native') && './rules/react-native',
-  ].map(require.resolve),
+  extends: configs,
 
   env: {
     es6: true,

@@ -1,20 +1,33 @@
-var resolve = require('path').resolve
 // Specifies additional options to use in React / React-JSX projects.
 // Note that you need to manually install `eslint-plugin-react` as a peer
 // dependency (see https://goo.gl/I4AYlb for more details).
+
+var configs = ['plugin:react/recommended'];
+var plugins = ['react'];
+
+try {
+  if (require.resolve('eslint-plugin-flowtype')) {
+    plugins.push('flowtype');
+    configs.push('plugin:flowtype/recommended');
+  }
+} catch (err) {
+  console.warn(chalk.yellow('eslint-plugin-flowtype not found; skipping Flow rules'));
+}
+
+try {
+  if (require.resolve('eslint-config-prettier')) {
+    configs.push('prettier/react');
+    configs.push('prettier/flowtype');
+  }
+} catch (err) {
+  console.warn(chalk.yellow('eslint-config-prettier not found; skipping Prettier rules'));
+}
+
 module.exports = {
 
-  extends: [
-    'plugin:react/recommended', // overridden below, unless this package falls behind plugin
-    require('eslint-plugin-flowtype') && 'plugin:flowtype/recommended',
-    require('eslint-config-prettier') && 'prettier/react',
-    require('eslint-config-prettier') && 'prettier/flowtype',
-  ],
+  extends: configs,
 
-  plugins: [
-    require('eslint-plugin-flowtype') && 'flowtype',
-    'react',
-  ],
+  plugins: plugins,
 
   parserOptions: {
     sourceType: 'module',

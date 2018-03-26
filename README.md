@@ -48,27 +48,26 @@ Some recommended ESLint plugins are:
 * [linter-eslint for Atom](https://atom.io/packages/linter-eslint)
 * [sublime-linter](https://sublimelinter.readthedocs.io/en/latest/installation.html)
 
-## Integrating ESLint With `prettier`
+## Integrating ESLint With Prettier
 
-In order to user `prettier` with `ESLint` and `eslint-config-digital-scientists`, you will need to do the following:
+In order to user `prettier` with `eslint` and `eslint-config-digital-scientists`, you will need to do the following:
 
-### Install `prettier` and `eslint-config-prettier`
+Install `prettier` and `eslint-config-prettier`
 
 ```
 npm install --save-dev --save-exact prettier eslint-config-prettier
 ```
 
-### Modify `.eslintrc.{js,json}` to extend `eslint-config-pretter` _after_ `eslint-config-digital-scientists` to overwrite any rules that conflict with prettier
+Modify `.eslintrc.{js,json}` to extend `eslint-config-pretter` **after** `eslint-config-digital-scientists` to overwrite any rules that conflict with prettier
 
 ```json
 {
   "extends": ["digital-scientists", "prettier", "prettier/react"],
-
   "root": true
 }
 ```
 
-### Add a `prettier` config (e.g. `.prettierrc.js`) with these recommended settings:
+Add a `prettier` config (e.g. `.prettierrc.js`) with these recommended settings:
 
 ```js
 module.exports = {
@@ -85,7 +84,7 @@ module.exports = {
 };
 ```
 
-### Install a Prettier formatting plugin for your editor and set to format on save`
+Install a Prettier formatting plugin for your editor and set to format on save`
 
 * For Visual Studio Code: [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 * For Atom: [prettier-atom](https://github.com/prettier/prettier-atom)

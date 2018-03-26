@@ -2,8 +2,6 @@
 
 An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs) for JS and React (and React Native) projects at [Digital Scientists](http://www.digital-scientists.com/).
 
-## This is a WIP and not ready for use
-
 ## Installation
 
 It's recommended to always install linting/formatting engines and configs **locally**, since supported rules and config specifics can change over time and may cause inconsistencies across projects if installed globally and updated over time.
@@ -11,6 +9,8 @@ It's recommended to always install linting/formatting engines and configs **loca
 ```sh
 npm install --save-dev --save-exact eslint eslint-config-digital-scientists
 ```
+
+## Usage
 
 In your local `.eslintrc.{js,json}` file:
 
@@ -30,76 +30,68 @@ _Note:_
 
 To add a few `react-native`-specific rules, just add this additional extension to your `.eslintrc` `extends` property list:
 
-```
+```json
 {
-  "extends": [
-    "digital-scientists",
-    "digital-scientists/react-native"
-  ],
+  "extends": ["digital-scientists", "digital-scientists/react-native"],
 
   "root": true
 }
 ```
 
-### Integrating ESLint with your editor
+## Integrating ESLint with your editor
 
 For the best developer experience, it's recommended to install and activate an ESLint extension/plugin for your editor to provide immediate visual feedback about linting issues.
 
 Some recommended ESLint plugins are:
 
 * [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-* [linter-eslint for Atom](https://atom.io/packages/linter-eslint) \*[sublime-linter](https://sublimelinter.readthedocs.io/en/latest/installation.html)
+* [linter-eslint for Atom](https://atom.io/packages/linter-eslint)
+* [sublime-linter](https://sublimelinter.readthedocs.io/en/latest/installation.html)
 
-## Integrating With `prettier`
+## Integrating ESLint With `prettier`
 
 In order to user `prettier` with `ESLint` and `eslint-config-digital-scientists`, you will need to do the following:
 
-1.  Install `prettier` and `eslint-config-prettier` to turn off ESLint rules that conflict with Prettier
+### Install `prettier` and `eslint-config-prettier`
 
 ```
-npm install --save-dev --save-exact \
-  prettier \
-  eslint-config-prettier
+npm install --save-dev --save-exact prettier eslint-config-prettier
 ```
 
-2.  Modify `.eslintrc.{js,json}` to extend `eslint-config-pretter` _after_ `eslint-config-digital-scientists` to overwrite any rules that conflict with prettier
+### Modify `.eslintrc.{js,json}` to extend `eslint-config-pretter` _after_ `eslint-config-digital-scientists` to overwrite any rules that conflict with prettier
 
-```
+```json
 {
-  "extends": [
-    "digital-scientists",
-    "prettier",
-    "prettier/react"
-  ],
+  "extends": ["digital-scientists", "prettier", "prettier/react"],
 
   "root": true
 }
 ```
 
-3.  Add a `prettier` config (e.g. `.prettierrc.js`) with these recommended settings:
+### Add a `prettier` config (e.g. `.prettierrc.js`) with these recommended settings:
 
-```
+```js
 module.exports = {
-  arrowParens: 'always',
+  arrowParens: "always",
   bracketSpacing: false,
   jsxBracketSameLine: false,
   printWidth: 80,
   singleQuote: true,
   semi: false,
   tabWidth: 2,
-  trailingComma: 'es5',
+  trailingComma: "es5",
   useTabs: false,
-  proseWrap: 'always',
-}
+  proseWrap: "always"
+};
 ```
 
-4.  Install a Prettier formatting plugin for your editor and set your editor's equivalent setting to `editor.formatOnSave: true`
+### Install a Prettier formatting plugin for your editor and set to format on save`
 
 * For Visual Studio Code: [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 * For Atom: [prettier-atom](https://github.com/prettier/prettier-atom)
 * For Sublime: [JsPrettier](https://github.com/jonlabelle/SublimeJsPrettier)
 
-### For Babel-Transpiled Projects
+## For Babel-Transpiled Projects
 
 This config's peer dependencies enable linting relatively modern files including JSX components. If you find that the linter fails to understand some early-stage ES features, you can enable parsing using Babel instead of ESLint's default parser. Install `babel-eslint` and set the `parser` option of your config:
 

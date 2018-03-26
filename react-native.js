@@ -6,28 +6,25 @@
 
 module.exports = {
   env: {
-    "react-native/react-native": true,
+    "react-native/react-native": true
   },
 
-  extends: [
-    "plugin:react-native/all",
-  ],
+  extends: ["plugin:react-native/all"],
 
-  plugins: [
-   "react-native",
-  ],
+  plugins: ["react-native"],
 
   parserOptions: {
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
 
   rules: {
+    alert: 0,
     "react-native/no-unused-styles": 1,
     "react-native/split-platform-components": 1,
     "react-native/no-inline-styles": 0,
-    "react-native/no-color-literals": 1,
-  },
-}
+    "react-native/no-color-literals": 1
+  }
+};

@@ -3,7 +3,6 @@
 // dependency (see https://goo.gl/I4AYlb for more details).
 
 module.exports = {
-
   extends: ["plugin:react/recommended"],
 
   plugins: ["react"],
@@ -11,8 +10,8 @@ module.exports = {
   parserOptions: {
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
 
   rules: {
@@ -85,7 +84,6 @@ module.exports = {
     "react/jsx-tag-spacing": 1, // Validate whitespace in and around the JSX opening and closing brackets (fixable)
     "react/jsx-uses-react": 1, // Prevent React to be incorrectly marked as unused
     "react/jsx-uses-vars": 1, // Prevent variables used in JSX to be incorrectly marked as unused
-    "react/jsx-wrap-multilines": 1, // Prevent missing parentheses around multilines JSX (fixable)
-  },
-
+    "react/jsx-wrap-multilines": 1 // Prevent missing parentheses around multilines JSX (fixable)
+  }
 };

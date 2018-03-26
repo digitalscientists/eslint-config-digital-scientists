@@ -1,16 +1,13 @@
 /* eslint-disable quotes */
 
 module.exports = {
-  extends: [
-    "eslint:recommended",
-    ], // overridden below unless new recommended rules are added before this doc is updated
+  extends: ["eslint:recommended"], // overridden below unless new recommended rules are added before this doc is updated
 
   plugins: [],
 
-  parser: 'babel-eslint',
+  parser: "babel-eslint",
 
   rules: {
-
     // http://eslint.org/docs/rules/
 
     // --------------------- POSSIBLE ERRORS ----------------------
@@ -31,7 +28,7 @@ module.exports = {
     "no-extra-parens": [
       0,
       "all",
-      { returnAssign: false, nestedBinaryExpressions: false },
+      { returnAssign: false, nestedBinaryExpressions: false }
     ], // disallow unnecessary parentheses
     "no-extra-semi": 2, // disallow unnecessary semicolons
     "no-func-assign": 2, // disallow reassigning `function` declarations
@@ -91,7 +88,7 @@ module.exports = {
     "no-magic-numbers": [0, { ignore: [0, 1, 24, 60] }], // disallow magic numbers
     "no-multi-spaces": [
       0,
-      { exceptions: { VariableDeclarator: true, Property: true } },
+      { exceptions: { VariableDeclarator: true, Property: true } }
     ], // disallow multiple spaces
     "no-multi-str": 1, // disallow multiline strings
     "no-native-reassign": 2, // disallow reassigning native objects
@@ -117,8 +114,8 @@ module.exports = {
       {
         allowTaggedTemplates: true,
         allowShortCircuit: true,
-        allowTernary: true,
-      },
+        allowTernary: true
+      }
     ], // disallow unused expressions
     "no-unused-labels": 2, // disallow unused labels
     "no-useless-call": 1, // disallow unnecessary calls to `.call()` and `.apply()`
@@ -150,7 +147,14 @@ module.exports = {
     "no-undef-init": 0, // disallow initializing variables to `undefined`
     "no-undefined": 0, // disallow the use of `undefined` as an identifier
     "no-unused-vars": [1, { argsIgnorePattern: "^(next|_)$" }], // disallow unused variables
-    "no-use-before-define": [1, "nofunc"], // disallow the use of variables before they are defined
+    "no-use-before-define": [
+      1,
+      {
+        variables: false,
+        functions: false,
+        classes: true
+      }
+    ], // disallow the use of variables before they are defined
 
     // --------------------- NODE.JS AND COMMONJS ----------------------
     "callback-return": 0, // require `return` statements after callbacks
@@ -187,7 +191,7 @@ module.exports = {
     indent: [
       0,
       2,
-      { SwitchCase: 1, VariableDeclarator: { var: 2, let: 2, const: 3 } },
+      { SwitchCase: 1, VariableDeclarator: { var: 2, let: 2, const: 3 } }
     ], // enforce consistent indentation
     "jsx-quotes": [2, "prefer-double"], // enforce the consistent use of either double or single quotes in JSX attributes
     "key-spacing": [1, { mode: "minimum" }], // enforce consistent spacing between keys and values in object literal properties
@@ -199,16 +203,19 @@ module.exports = {
     "max-depth": [1, { max: 6 }], // enforce a maximum depth that blocks can be nested
     "max-len": [
       1,
-      { code: 100, ignoreStrings: true, ignoreTemplateLiterals: true },
+      { code: 100, ignoreStrings: true, ignoreTemplateLiterals: true }
     ], // enforce a maximum line length
     "max-lines": [0, { max: 300 }], // enforce a maximum file length
     "max-nested-callbacks": [1, { max: 6 }], // enforce a maximum depth that callbacks can be nested
     "max-params": [1, { max: 6 }], // enforce a maximum number of parameters in `function` definitions
     "max-statements": [1, 30], // enforce a maximum number of statements allowed in `function` blocks
     "max-statements-per-line": [1, { max: 2 }], // enforce a maximum number of statements allowed per line
-    "new-cap": [1, {
-      capIsNew: false,
-    }], // require constructor `function` names to begin with a capital letter
+    "new-cap": [
+      1,
+      {
+        capIsNew: false
+      }
+    ], // require constructor `function` names to begin with a capital letter
     "new-parens": 0, // require parentheses when invoking a constructor with no arguments
     "newline-after-var": 0, // require or disallow an empty line after `var` declarations
     "newline-before-return": 0, // require an empty line before `return` statements
@@ -244,22 +251,25 @@ module.exports = {
     "operator-linebreak": 0, // enforce consistent linebreak style for operators
     "padded-blocks": 0, // require or disallow padding within blocks
     "quote-props": [1, "as-needed"], // require quotes around object literal property names
-    quotes: [
-      2,
-      "double",
-      { avoidEscape: true, allowTemplateLiterals: true },
-    ], // enforce the consistent use of either backticks, double, or single quotes
+    quotes: [1, "single", { avoidEscape: true, allowTemplateLiterals: true }], // enforce the consistent use of either backticks, double, or single quotes
     "require-jsdoc": 0, // require JSDoc comments
     semi: [0, "always"], // require or disallow semicolons instead of ASI
     "semi-spacing": 0, // enforce consistent spacing before and after semicolons
-    "sort-keys": 0, // requires object keys to be sorted
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        caseSensitive: false,
+        nature: true
+      }
+    ], // requires object keys to be sorted
     "sort-vars": 0, // require variables within the same declaration block to be sorted
     "space-before-blocks": 0, // enforce consistent spacing before blocks
     "space-before-function-paren": 0, // enforce consistent spacing before `function` definition opening parenthesis
     "space-in-parens": 0, // enforce consistent spacing inside parentheses
     "space-infix-ops": 1, // require spacing around operators
     "space-unary-ops": 1, // enforce consistent spacing before or after unary operators
-    "spaced-comment": 0, // enforce consistent spacing after the `//` or `/*` in a comment
+    "spaced-comment": 1, // enforce consistent spacing after the `//` or `/*` in a comment
     "template-tag-spacing": 0, // require or disallow spacing between template tags and their literals
     "unicode-bom": 0, // require or disallow the Unicode BOM
     "wrap-regex": 0, // require parenthesis around regex literals
@@ -284,7 +294,7 @@ module.exports = {
     "no-var": 0, // require `let` or `const` instead of var
     "object-shorthand": 0, // require or disallow method and property shorthand syntax for object literals
     "prefer-arrow-callback": 0, // require arrow functions as callbacks
-    "prefer-const": 0, // require `const` declarations for variables that are never reassigned after declared
+    "prefer-const": 1, // require `const` declarations for variables that are never reassigned after declared
     "prefer-destructuring": 1, // require destructuring from arrays and/or objects
     "prefer-numeric-literals": 0, // disallow `parseInt()` in favor of binary, octal, and hexadecimal literals
     "prefer-reflect": 0, // require `Reflect` methods where applicable
@@ -295,6 +305,6 @@ module.exports = {
     "sort-imports": 0, // enforce sorted import declarations within modules
     "symbol-description": 1, // require symbol descriptions
     "template-curly-spacing": [2, "never"], // require or disallow spacing around embedded expressions of template strings
-    "yield-star-spacing": 1, // require or disallow spacing around the `*` in `yield*` expressions
-  },
+    "yield-star-spacing": 1 // require or disallow spacing around the `*` in `yield*` expressions
+  }
 };

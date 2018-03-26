@@ -56,7 +56,7 @@ Some recommended ESLint plugins are:
 
 ## Integrating ESLint With Prettier
 
-In order to user `prettier` with `eslint` and `eslint-config-digital-scientists`, you will need to do the following:
+**In order to user `prettier` with `eslint` and `eslint-config-digital-scientists`, you will need to do the following:**
 
 Install `prettier` and `eslint-config-prettier`
 
@@ -64,7 +64,7 @@ Install `prettier` and `eslint-config-prettier`
 npm install --save-dev --save-exact prettier eslint-config-prettier
 ```
 
-Modify `.eslintrc.{js,json}` to extend `eslint-config-pretter` **after** `eslint-config-digital-scientists` to overwrite any rules that conflict with prettier
+Update your `.eslintrc` to this (**order matters**):
 
 ```json
 {
@@ -73,7 +73,7 @@ Modify `.eslintrc.{js,json}` to extend `eslint-config-pretter` **after** `eslint
 }
 ```
 
-Add a `prettier` config (e.g. `.prettierrc.js`) with these recommended settings:
+Add a `prettier` config (e.g. `.prettierrc.js`) to your project's root directory with these recommended settings:
 
 ```js
 module.exports = {
@@ -90,7 +90,7 @@ module.exports = {
 };
 ```
 
-Install a Prettier formatting plugin for your editor and set to format on save`
+Install a Prettier formatting plugin for your editor and set to format on save
 
 * For Visual Studio Code: [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 * For Atom: [prettier-atom](https://github.com/prettier/prettier-atom)

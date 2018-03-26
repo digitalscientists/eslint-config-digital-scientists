@@ -1,6 +1,6 @@
 # eslint-config-digital-scientists
 
-An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs) for JS and React (and React Native) projects at [Digital Scientists](http://www.digital-scientists.com/).
+An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs) for JS and React (and React Native) projects at [Digital Scientists](http://www.digitalscientists.com/).
 
 ## Installation
 

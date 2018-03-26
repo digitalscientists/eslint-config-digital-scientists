@@ -1,33 +1,33 @@
-'use strict';
+"use strict";
 
 // Specifies additional options to use in React-Native projects.
 // Note that you need to manually install `eslint-plugin-react-native` as a peer
 // dependency (see https://goo.gl/I4AYlb for more details).
 
 module.exports = {
-  "env": {
-    "react-native/react-native": true
+  env: {
+    "react-native/react-native": true,
   },
 
-  "extends": [
-    "plugin:react-native/all"
+  extends: [
+    "plugin:react-native/all",
   ],
 
-  "plugins": [
-   "react-native"
+  plugins: [
+   "react-native",
   ],
 
-  "parserOptions": {
-    sourceType: 'module',
+  parserOptions: {
+    sourceType: "module",
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
 
-  "rules": {
+  rules: {
     "react-native/no-unused-styles": 1,
     "react-native/split-platform-components": 1,
     "react-native/no-inline-styles": 0,
-    "react-native/no-color-literals": 1
-  }
+    "react-native/no-color-literals": 1,
+  },
 }

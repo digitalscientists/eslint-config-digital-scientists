@@ -3,20 +3,13 @@
 module.exports = {
   extends: [
     "eslint:recommended",
-    // this extends eslint-config-prettier so we don't need too:
-    "plugin:prettier/recommended"
-  ], // overridden below unless new recommended rules are added before this doc is updated
+    ], // overridden below unless new recommended rules are added before this doc is updated
 
-  plugins: [
-    'prettier'
-  ],
+  plugins: [],
+
+  parser: 'babel-eslint',
 
   rules: {
-    "prettier/prettier": ["error", {
-      "bracketSpacing": false,
-      "printWidth": 90,
-      "trailingComma": "all",
-    }],
 
     // http://eslint.org/docs/rules/
 
@@ -38,7 +31,7 @@ module.exports = {
     "no-extra-parens": [
       0,
       "all",
-      { returnAssign: false, nestedBinaryExpressions: false }
+      { returnAssign: false, nestedBinaryExpressions: false },
     ], // disallow unnecessary parentheses
     "no-extra-semi": 2, // disallow unnecessary semicolons
     "no-func-assign": 2, // disallow reassigning `function` declarations
@@ -98,7 +91,7 @@ module.exports = {
     "no-magic-numbers": [0, { ignore: [0, 1, 24, 60] }], // disallow magic numbers
     "no-multi-spaces": [
       0,
-      { exceptions: { VariableDeclarator: true, Property: true } }
+      { exceptions: { VariableDeclarator: true, Property: true } },
     ], // disallow multiple spaces
     "no-multi-str": 1, // disallow multiline strings
     "no-native-reassign": 2, // disallow reassigning native objects
@@ -124,8 +117,8 @@ module.exports = {
       {
         allowTaggedTemplates: true,
         allowShortCircuit: true,
-        allowTernary: true
-      }
+        allowTernary: true,
+      },
     ], // disallow unused expressions
     "no-unused-labels": 2, // disallow unused labels
     "no-useless-call": 1, // disallow unnecessary calls to `.call()` and `.apply()`
@@ -194,7 +187,7 @@ module.exports = {
     indent: [
       0,
       2,
-      { SwitchCase: 1, VariableDeclarator: { var: 2, let: 2, const: 3 } }
+      { SwitchCase: 1, VariableDeclarator: { var: 2, let: 2, const: 3 } },
     ], // enforce consistent indentation
     "jsx-quotes": [2, "prefer-double"], // enforce the consistent use of either double or single quotes in JSX attributes
     "key-spacing": [1, { mode: "minimum" }], // enforce consistent spacing between keys and values in object literal properties
@@ -206,7 +199,7 @@ module.exports = {
     "max-depth": [1, { max: 6 }], // enforce a maximum depth that blocks can be nested
     "max-len": [
       1,
-      { code: 100, ignoreStrings: true, ignoreTemplateLiterals: true }
+      { code: 100, ignoreStrings: true, ignoreTemplateLiterals: true },
     ], // enforce a maximum line length
     "max-lines": [0, { max: 300 }], // enforce a maximum file length
     "max-nested-callbacks": [1, { max: 6 }], // enforce a maximum depth that callbacks can be nested
@@ -234,7 +227,6 @@ module.exports = {
     "no-new-object": 0, // disallow `Object` constructors
     "no-plusplus": 0, // disallow the unary operators `++` and `--`
     "no-restricted-syntax": 0, // disallow specified syntax
-    "no-return-assign": 1,
     "no-spaced-func": 1, // disallow spacing between `function` identifiers and their applications
     "no-tabs": 0, // disallow tabs in file
     "no-ternary": 0, // disallow ternary operators
@@ -252,13 +244,13 @@ module.exports = {
     "operator-linebreak": 0, // enforce consistent linebreak style for operators
     "padded-blocks": 0, // require or disallow padding within blocks
     "quote-props": [1, "as-needed"], // require quotes around object literal property names
-    "quotes": [
+    quotes: [
       2,
       "double",
-      { avoidEscape: true, allowTemplateLiterals: true }
+      { avoidEscape: true, allowTemplateLiterals: true },
     ], // enforce the consistent use of either backticks, double, or single quotes
     "require-jsdoc": 0, // require JSDoc comments
-    "semi": [0, "always"], // require or disallow semicolons instead of ASI
+    semi: [0, "always"], // require or disallow semicolons instead of ASI
     "semi-spacing": 0, // enforce consistent spacing before and after semicolons
     "sort-keys": 0, // requires object keys to be sorted
     "sort-vars": 0, // require variables within the same declaration block to be sorted
@@ -303,6 +295,6 @@ module.exports = {
     "sort-imports": 0, // enforce sorted import declarations within modules
     "symbol-description": 1, // require symbol descriptions
     "template-curly-spacing": [2, "never"], // require or disallow spacing around embedded expressions of template strings
-    "yield-star-spacing": 1 // require or disallow spacing around the `*` in `yield*` expressions
-  }
+    "yield-star-spacing": 1, // require or disallow spacing around the `*` in `yield*` expressions
+  },
 };

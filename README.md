@@ -18,7 +18,6 @@ npm install -g \
   eslint-config-digital-scientists \
   eslint-plugin-prettier \
   eslint-config-prettier \
-  eslint-plugin-flow \
   eslint-plugin-react \
   eslint-plugin-react-native
 ```
@@ -41,6 +40,34 @@ A specific project can extend this definition by including `eslint eslint-config
 {
 	"extends": "digital-scientists",
 	"root": true
+}
+```
+
+### Integrating With `prettier`
+
+In order to user `prettier`, you will need to do the following:
+
+#### Install dependencies
+```
+npm install --save-dev \
+  prettier \
+  eslint-config-prettier \
+  eslint-plugin-prettier
+```
+
+#### Modify `.eslintrc.{js,json}`
+
+```
+{
+  "extends": [
+    "digital-scientists",
+    "plugin:prettier/recommended"
+    "prettier/react"
+  ]
+  
+  "plugins": [
+    "prettier"
+  ]
 }
 ```
 

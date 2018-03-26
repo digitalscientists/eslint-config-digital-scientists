@@ -26,22 +26,15 @@
   "homepage": "https://github.com/digitalscientists/eslint-config-digital-scientists",
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "~3.19.0",
-    "mocha": "^3.0.0"
+    "eslint": "^4.19.1",
+    "mocha": "^5.0.5"
   },
   "peerDependencies": {
-    "babel-eslint": ">=8.2.2",
-    "eslint": ">=3.19.0",
-    "eslint-config-prettier": ">=2.9.0",
-    "eslint-plugin-react": ">=7.0.1",
-    "eslint-plugin-prettier": ">=2.6.0",
-    "prettier": ">=1.11.1"
-  },
-  "optionalDependencies": {
-    "eslint-plugin-flowtype": "^2.46.1",
-    "eslint-plugin-react-native": ">= 3.2.1"
+    "eslint": "~4.6.0"
   },
   "dependencies": {
-    "chalk": "^2.3.2"
+    "babel-eslint": "~8.2.2",
+    "eslint-plugin-react": ">=7.0.1",
+    "eslint-plugin-react-native": ">= 3.2.1"
   }
 }

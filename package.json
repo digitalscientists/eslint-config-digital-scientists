@@ -35,7 +35,7 @@
     "eslint": "^4.6.0"
   },
   "dependencies": {
-    "eslint-config-digital-scientists-base": "^0.10.0",
+    "eslint-config-digital-scientists-base": "^0.11.0",
     "eslint-config-digital-scientists-react": "^0.3.0",
     "eslint-config-digital-scientists-react-native": "^0.2.0"
   }

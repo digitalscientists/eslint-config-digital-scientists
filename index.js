@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 module.exports = {
   extends: [
-    'digital-scientists-base',
-    'digital-scientists-react',
-    'digital-scientists-react-native',
+    "digital-scientists-base",
+    "digital-scientists-react",
+    "digital-scientists-react-native",
   ],
 
   env: {
@@ -15,6 +15,8 @@ module.exports = {
     jasmine: true,
     jest: true,
   },
+
+  parser: "babel-eslint",
 
   parserOptions: {
     ecmaVersion: 2018,

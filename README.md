@@ -4,12 +4,14 @@ An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-co
 
 ## Installation
 
-It's recommended to always install linting/formatting engines, configs, and their peer dependencies **locally**, since supported rules and config specifics can change over time and may cause inconsistencies across projects if installed globally and updated over time.
+It's recommended to always install linting/formatting engines, configs, and their peer dependencies **locally** to a project and tracked in source control, since supported rules and config specifics can change over time and may cause inconsistencies across projects if installed globally and updated over time.
 
 Install config and peer dependencies:
 
 ```sh
-npm install --save-dev --save-exact eslint eslint-config-digital-scientists
+npm install --save-dev --save-exact \
+  eslint eslint-config-digital-scientists
+  babel-eslint
 ```
 
 ## Usage
@@ -27,22 +29,6 @@ _Note:_
 
 * the `eslint-config-` portion of the module name is assumed by ESLint.
 * the `root` attribute prevents ESLint from merging local rules with any global configs you may have installed.
-
-## For Babel-Transpiled Projects
-
-This config's peer dependencies enable linting relatively modern files including JSX components. If you find that the linter fails to understand some early-stage ES features, you can enable parsing using Babel instead of ESLint's default parser. Install `babel-eslint` and set the `parser` option of your config:
-
-```sh
-npm install babel-eslint --save-dev
-```
-
-```json
-{
-  "parser": "babel-eslint",
-  "extends": "digital-scientists",
-  "root": true
-}
-```
 
 ## Integrating ESLint with your editor
 
@@ -81,12 +67,12 @@ module.exports = {
   bracketSpacing: false,
   jsxBracketSameLine: false,
   printWidth: 80,
-  singleQuote: true,
-  semi: false,
+  singleQuote: false,
+  semi: true,
   tabWidth: 2,
   trailingComma: "es5",
   useTabs: false,
-  proseWrap: "always"
+  proseWrap: "always",
 };
 ```
 

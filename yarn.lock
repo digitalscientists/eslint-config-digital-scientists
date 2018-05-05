@@ -303,6 +303,14 @@ eslint-config-digital-scientists-react@^0.1.1:
   dependencies:
     eslint-plugin-react "^7.0.1"
 
+eslint-config-digital-scientists@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists/-/eslint-config-digital-scientists-0.6.0.tgz#ba22007895f4feb1b53ee6e7d82d5c93b9133f76"
+  dependencies:
+    eslint-config-digital-scientists-base "^0.4.0"
+    eslint-config-digital-scientists-react "^0.1.1"
+    eslint-config-digital-scientists-react-native "^0.1.2"
+
 eslint-plugin-react-native-globals@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-native-globals/-/eslint-plugin-react-native-globals-0.1.2.tgz#ee1348bc2ceb912303ce6bdbd22e2f045ea86ea2"

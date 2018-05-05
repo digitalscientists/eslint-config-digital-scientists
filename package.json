@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "publish:npm": "git add . && git commit -m 'update' && npm version minor&& git push --tags && npm publish",
     "test": "mocha"
   },
   "repository": {
@@ -34,6 +35,7 @@
     "eslint": "^4.6.0"
   },
   "dependencies": {
+    "eslint-config-digital-scientists": "^0.6.0",
     "eslint-config-digital-scientists-base": "^0.4.0",
     "eslint-config-digital-scientists-react": "^0.1.1",
     "eslint-config-digital-scientists-react-native": "^0.1.2"

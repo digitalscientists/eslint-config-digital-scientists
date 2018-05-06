@@ -301,9 +301,9 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-digital-scientists-base@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-base/-/eslint-config-digital-scientists-base-0.14.0.tgz#e6e630f28bfa44cb2019063b86863537745b6dac"
+eslint-config-digital-scientists-base@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-base/-/eslint-config-digital-scientists-base-0.15.0.tgz#ef9cff7b174be66200495fae89387ced9820c088"
   dependencies:
     cosmiconfig "^5.0.1"
     eslint-config-prettier "^2.9.0"

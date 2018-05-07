@@ -322,9 +322,9 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-digital-scientists-base@^0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-base/-/eslint-config-digital-scientists-base-0.19.0.tgz#f66c503edd248e482f167567ac7ae6d013e85bca"
+eslint-config-digital-scientists-base@^0.20.0:
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-base/-/eslint-config-digital-scientists-base-0.20.0.tgz#ec45a8100ca77aee75e631c381bf18567bc5f99a"
   dependencies:
     cosmiconfig "^5.0.1"
     eslint-config-prettier "^2.9.0"
@@ -339,9 +339,9 @@ eslint-config-digital-scientists-react-native@^0.2.0:
   dependencies:
     eslint-plugin-react-native "^3.2.1"
 
-eslint-config-digital-scientists-react@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-react/-/eslint-config-digital-scientists-react-0.9.0.tgz#4e62e016d9805a315d59d0068ded9db0d9da3145"
+eslint-config-digital-scientists-react@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-react/-/eslint-config-digital-scientists-react-0.10.0.tgz#82c528232fa8d8ec4eb9d09b530a0ab10199fab8"
   dependencies:
     cosmiconfig "^5.0.1"
     eslint-config-prettier "^2.9.0"

@@ -339,9 +339,9 @@ eslint-config-digital-scientists-react-native@^0.2.0:
   dependencies:
     eslint-plugin-react-native "^3.2.1"
 
-eslint-config-digital-scientists-react@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-react/-/eslint-config-digital-scientists-react-0.7.0.tgz#176db9cf7837e44c6100e7f9db1127eadd945347"
+eslint-config-digital-scientists-react@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-digital-scientists-react/-/eslint-config-digital-scientists-react-0.8.0.tgz#5156fd536f03413df03f76d19091ab4e8a98e7ae"
   dependencies:
     cosmiconfig "^5.0.1"
     eslint-config-prettier "^2.9.0"
